@@ -55,7 +55,6 @@ class Review(db.Model, SerializerMixin):
     rating = db.Column(db.Integer)
     comment = db.Column(db.String)
 
- 
     # serialization rule to avoid circular references
     serialize_rules = ('-customer.reviews', '-item.reviews',)
 
